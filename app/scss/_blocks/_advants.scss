@@ -1,0 +1,247 @@
+.advants {
+	margin-bottom: 90px;
+
+	&__main {
+		padding-top: 65px;
+		padding-bottom: 90px;
+		position: relative;
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 1920px;
+			top: 0;
+			bottom: 0;
+			left: 50%;
+			margin-left: -960px;
+			background-image: url('../img/advants-main-bg.jpg');
+			background-size: auto 100%;
+			background-repeat: no-repeat;
+		}
+	}
+
+	&__main-container {
+		position: relative;
+		padding-left: 585px;
+	}
+
+	&__main-list {
+		margin-top: 65px;
+	}
+
+	&__main-item {
+		flex: 0 0 50%;
+		max-width: 50%;
+
+		&:nth-child(n + 3) {
+			margin-top: 90px;
+		}
+	}
+
+	&__item-title {
+		position: relative;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: normal;
+		color: #1465b9;
+		text-transform: uppercase;
+
+		&::before {
+			content: '+';
+			position: absolute;
+			font-weight: 500;
+			color: #f7850a;
+			font-size: 30px;
+			right: 100%;
+			margin-right: 13px;
+			top: -8px;
+		}
+	}
+
+	&__item-text {
+		margin-top: 25px;
+		line-height: 24px;
+	}
+
+	&__bottom {
+		background-color: #ebf4fd;
+		padding-top: 70px;
+		padding-bottom: 50px;
+	}
+
+	&__bottom-container {
+		display: flex;
+		align-items: center;
+	}
+
+	&__bottom-item {
+
+
+		&:nth-child(1) {
+			flex: 0 0 570px;
+			max-width: 570px;
+			padding-left: 22px + 15px;
+			padding-right: 130px;
+		}
+	}
+
+	&__document-wrap {
+		flex: 0 0 257px;
+		max-width: 257px;
+		height: 0;
+		display: flex;
+		align-items: center;
+	}
+
+	&__document {
+		margin-top: -20px;
+		box-shadow: 0 12px 20px rgba(#b9d0e8, 0.15);
+		transition: transform 0.25s, box-shadow 0.25s;
+
+		&:hover {
+			transform: translate(0, -10px);
+			box-shadow: 0 22px 30px rgba(#b9d0e8, 0.15);
+		}
+	}
+
+	&__button-wrap {
+		margin: 40px auto 0;
+		width: 413px;
+		position: relative;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: -56px;
+			width: 108px;
+			height: 79px;
+			background-size: 100% 100%;
+		}
+
+		&::before {
+			background-image: url('../img/advants-button-arrow-left.png');
+			left: -45px;
+		}
+
+		&::after {
+			background-image: url('../img/advants-button-arrow-right.png');
+			right: -45px;
+		}
+	}
+
+	&__button {
+		width: 100%;
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.advants {
+
+		&__main-container {
+			padding-left: 500px;
+		}
+
+		&__bottom-item {
+
+			&:nth-child(1) {
+				flex-basis: 485px;
+				max-width: 485px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.advants {
+		margin-bottom: 60px;
+
+		&__main {
+			padding: 30px 0;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		&__main-container {
+			padding-left: 15px;
+		}
+
+		&__main-list {
+			margin-top: 20px;
+		}
+
+		&__main-item {
+			flex-basis: 100%;
+			max-width: none;
+
+			&:nth-child(n + 2) {
+				margin-top: 20px;
+			}
+		}
+
+		&__item-title {
+			font-size: 14px;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		&__item-text {
+			margin-top: 10px;
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		&__bottom {
+			padding: 30px 0;
+		}
+
+		&__bottom-container {
+			flex-wrap: wrap;
+		}
+
+		&__bottom-item {
+
+			&:nth-child(1) {
+				flex-basis: 100%;
+				max-width: none;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+
+			&:nth-child(n + 2) {
+				margin-top: 20px;
+			}
+		}
+
+		&__document-wrap {
+			margin-top: 30px;
+			flex-basis: 100%;
+			max-width: none;
+			height: auto;
+			justify-content: center;
+		}
+
+		&__document {
+			width: 257px;
+			margin-top: 0;
+		}
+
+		&__button-wrap {
+			width: 100%;
+			max-width: 290px;
+			padding-left: 15px;
+			padding-right: 15px;
+			margin-top: 10px;
+
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+	}
+}

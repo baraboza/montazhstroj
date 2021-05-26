@@ -1,0 +1,197 @@
+.header {
+	
+	&__wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		height: 90px;
+	}
+
+	&__logo {
+		width: 142px;
+	}
+
+	&__logo-text {
+		margin-left: 13px;
+		font-size: 13px;
+		max-width: 185px;
+		line-height: normal;
+	}
+
+	&__nav {
+		padding: 0 40px;
+		flex-grow: 1;
+	}
+
+	&__nav-list {
+		display: flex;
+		justify-content: space-between;
+		font-size: 15px;
+		font-weight: 600;
+	}
+
+	&__nav-item {
+
+		a {
+			@include hover-opacity;
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		align-items: baseline;
+	}
+
+	&__phone-wrap {
+		text-align: right;
+	}
+
+	&__phone,
+	&__request-call,
+	&__messengers-item {
+
+		a {
+			@include hover-opacity;
+		}
+	}
+
+	&__request-call {
+		margin-top: 7px;
+		font-size: 14px;
+		color: #1465b9;
+
+		a {
+			display: inline-block;
+			padding-bottom: 3px;
+			border-bottom: 2px dotted #1465b9;
+		}
+	}
+
+	&__messengers {
+		margin-left: 5px;
+		display: flex;
+		font-size: 22px;
+	}
+
+	&__messengers-item {
+		margin-left: 8px;
+	}
+
+	&__button-menu {
+		display: none;
+	}
+
+	&__mobile {
+		display: none;
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.header {
+
+		&__nav {
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+
+		&__nav-list {
+			font-size: 14px;
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.header {
+
+		&__container {
+			height: 70px;
+		}
+
+		&__logo {
+			width: 110px;
+		}
+
+		&__logo-text {
+			display: none;
+		}
+
+		&__nav {
+			display: none;
+		}
+
+		&__contacts {
+			display: none;
+		}
+
+		&__button-menu {
+			display: block;
+			cursor: pointer;
+			margin-left: auto;
+			font-size: 25px;
+		}
+
+		&__mobile {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 2;
+			background-color: #fff;
+			overflow: auto;
+			padding: 70px 30px 40px;
+		}
+
+		&__mobile-close {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			font-size: 28px;
+			cursor: pointer;
+		}
+
+		&__nav-list {
+			flex-direction: column;
+			text-align: center;
+			font-size: 20px;
+		}
+
+		&__nav-item {
+
+			&:nth-child(n + 2) {
+				margin-top: 20px;
+			}
+		}
+
+		&__phone {
+			text-align: center;
+			font-size: 18px;
+			margin-top: 40px;
+		}
+
+		&__request-call {
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		&__messengers {
+			margin-left: 0;
+			justify-content: center;
+			margin-top: 30px;
+			font-size: 30px;
+		}
+
+		&__messengers-item {
+
+			&:nth-child(n + 1) {
+				margin: 0 10px;
+			}
+		}
+	}
+}

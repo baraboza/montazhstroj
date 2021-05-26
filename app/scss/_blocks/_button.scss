@@ -1,0 +1,30 @@
+.button {
+	@include flex-center;
+	text-align: center;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: normal;
+	color: #fff;
+	text-transform: uppercase;
+	width: 233px;
+	height: 50px;
+	border-radius: 8px;
+	padding: 8px;
+	background-color: #f7850a;
+	box-shadow: 
+		0 5px #e57700, 
+		0 15px 15px rgba(#e57700, 0.25);
+	transition: 0.25s;
+
+	&--big {
+		font-size: 15px;
+		height: 63px;
+	}
+
+	&:hover {
+		transform: translate(0, 3px);
+		box-shadow: 
+			0 2px #e57700, 
+			0 13px 13px rgba(#e57700, 0.25);
+	}
+}

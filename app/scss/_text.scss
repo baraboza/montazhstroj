@@ -1,0 +1,16 @@
+.h2 {
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 50px;
+}
+
+.txt-blue {
+	color: #509dea;
+}
+
+@include media-breakpoint-down(md) {
+	.h2 {
+		font-size: 22px;
+		line-height: 28px;
+	}
+}
